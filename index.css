@@ -1,0 +1,564 @@
+:root {
+    --prim-color: #F55536;
+    --sec-color: #6610F2;
+    --w-color: white;
+    --b-color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    position: absolute;
+}
+
+body,
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+section {
+    padding-top: 20vh;
+    width: 90%;
+    margin: auto;
+}
+
+.title {
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.title h1:first-child,
+.title h2:first-child {
+    color: var(--prim-color);
+}
+
+.title h1:last-child,
+.title h2:last-child {
+    color: var(--sec-color);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.5px;
+}
+
+.hide {
+    display: none;
+}
+
+/*-------------------NAME------------------*/
+.c-my-flooper {
+    display: none
+}
+
+.mobile {
+    width: 90%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0rem auto 10vh;
+}
+
+.mobile img {
+    z-index: 10;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--sec-color);
+}
+
+#navbar a {
+    color: var(--w-color);
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#navbar a:hover {
+    color: white;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+}
+
+/*-------------------SLOGAN------------------*/
+.slogan {
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 0vh;
+}
+
+.slogan>div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.slogan .title:nth-child(2) {
+    margin: 2rem 0rem;
+}
+
+/*-------------------COUNTDOWN------------------*/
+.countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+}
+
+.countdown p:first-child {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    color: var(--prim-color);
+    font-size: 2rem;
+}
+
+.countdown p:last-child {
+    color: var(--sec-color);
+    font-size: 5rem;
+}
+
+/*-------------------ABOUT------------------*/
+.suggestion .title,
+.info .title,
+.opor .title,
+.prog .title,
+.patro .title {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.info .text b {
+    color: var(--prim-color);
+}
+
+.info .text p {
+    margin-bottom: 1rem;
+}
+
+.info .text p:last-child {
+    margin-bottom: 0rem;
+}
+
+/*---------------------OPORTUNITIES-----------------*/
+.opor {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+}
+
+.opor div:not(:first-child) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opor div:not(:first-child) p {
+    width: 80%;
+}
+
+.opor div:not(:first-child) p span {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.orange,
+.purple-o {
+    color: var(--w-color);
+    background-color: var(--prim-color);
+}
+
+.purple,
+.orange-p {
+    color: var(--w-color);
+    background-color: var(--sec-color);
+}
+
+/*----------------------SCHEDULE-------------------*/
+
+
+/*----------------------SPONSORS-------------------*/
+.patro>div {
+    width: 100%;
+}
+
+.patro-powered,
+.patro-sponsor {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.patro-powered .title,
+.patro-sponsor .title {
+    width: 100%;
+}
+
+.patro-powered div:first-child,
+.patro-sponsor div:first-child {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.patro span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    font-size: 1.5rem;
+}
+
+.patro-powered a,
+.patro-sponsor div:last-child {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.patro img {
+    width: 20rem;
+}
+
+/*-------------------SUGGESTIONS------------------*/
+form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+textarea {
+    width: calc(100% - (4.5rem));
+    height: 20rem;
+    display: flex;
+    padding: 2rem;
+    border: 0.25rem solid var(--b-color);
+    border-top: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.frame {
+    width: calc(100% - 1rem);
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    background: var(--b-color);
+    padding: 0.25rem 0.5rem;
+}
+
+.frame>div {
+    border-radius: 50%;
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-right: 0.25rem;
+}
+
+#c1 {
+    background: #F55536;
+}
+
+#c2 {
+    background: #E3F438;
+}
+
+#c3 {
+    background: #38F446;
+}
+
+input[type="submit"] {
+    z-index: 1;
+    align-self: flex-end;
+    margin: -2rem -2rem 0rem 0rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    background: linear-gradient(-45deg, var(--prim-color), var(--sec-color));
+    color: var(--w-color);
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+}
+
+/*-------------------FOOTER---------------------*/
+footer {
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding: 2rem 0rem;
+    margin-top: 15vh;
+    color: var(--w-color);
+    background: linear-gradient(45deg, var(--prim-color), var(--sec-color));
+    text-align: center;
+    font-weight: bold;
+}
+
+.logos {
+    margin-top: 1rem;
+}
+
+.logos img {
+    width: 2rem;
+}
+
+.logos>a:first-child {
+    margin-right: 1rem;
+}
+
+/*-------------------DESKTOP---------------------*/
+@media only screen and (min-width: 1150px) {
+    section {
+        padding-top: 25vh;
+        min-height: 75vh;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .hide {
+        display: block;
+    }
+
+    /*-------------------HEAD---------------------*/
+    .head {
+        overflow-x: hidden;
+        position: sticky;
+        top: 0;
+        width: 100vw;
+    }
+    
+    .head span:first-child {
+        color: var(--prim-color);
+    }
+    
+    .head span:last-child {
+        position: relative;
+        z-index: -3;
+        padding-right: 2rem;
+        color: var(--sec-color);
+        font-style: normal;
+    }
+
+    .c-my-flooper {
+        display: flex;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        align-items: center;
+        width: 100%;
+        height: 15vh;
+        background-color: var(--w-color);
+        font-size: 2rem;
+    }
+
+    .mobile, #navbar img {
+        display: none;
+    }
+
+    #navbar {
+        position: initial;
+        display: flex;
+        flex-direction: row;
+        height: 5vh;
+        border-left: none;
+        border-right: none;
+    }
+
+    #navbar a {
+        width: 20%;
+        padding: 0.5rem 0rem;
+        background-color: var(--sec-color);
+    }
+
+    #navbar a:hover {
+        background-color: var(--w-color);
+        color: var(--sec-color);
+    }
+
+    /*-------------------SLOGAN---------------------*/
+    .slogan>div:first-child {
+        flex-direction: row;
+        font-size: 3rem;
+    }
+
+    .countdown {
+        margin-top: 0;
+    }
+
+    .countdown p:first-child {
+        -webkit-text-stroke-width: 1.5px;
+        font-size: 5rem;
+    }
+
+    .suggestion .title,
+    .info .title,
+    .opor .title,
+    .prog .title,
+    .patro .title {
+        font-size: 3rem;
+    }
+
+    /*-------------------ABOUT---------------------*/
+    .info {
+        width: 50%;
+    }
+
+    .info>div,
+    .suggestion>div {
+        display: flex;
+    }
+
+    .info .title {
+        margin-right: 3rem;
+        margin-bottom: 0rem;
+    }
+
+    /*-------------------OPORTUNITIES---------------------*/
+    .opor {
+        grid-gap: 4rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .orange-p {
+        background-color: var(--prim-color);
+    }
+
+    .purple-o {
+        background-color: var(--sec-color);
+    }
+
+    /*-------------------SCHEDULE---------------------*/
+    .prog>div {
+        width: 100%;
+    }
+
+    .days {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin: 2rem 0rem;
+    }
+
+    .days span {
+        font-size: 2rem;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1.5px;
+        cursor: pointer;
+    }
+
+    .days span.is-active {
+        -webkit-text-fill-color: var(--sec-color);
+        -webkit-text-stroke-width: default;
+        color: var(--sec-color);
+    }
+
+    .days span:hover {
+        color: var(--sec-color);
+    }
+    
+    .prog-grid {
+        width: 80%;
+        margin: auto;
+    }
+
+    .slot {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        border-bottom: 1px solid var(--sec-color);
+        align-items: center;
+        justify-items: center;
+    }
+
+    #day_23 .slot {
+        width: 50%;
+        margin: auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #day_24, #day_25 {
+        display: none;
+    }
+
+    .slot span, .slot img {
+        padding: 1rem 0rem;
+        color: var(--prim-color);
+    }
+
+    .slot span:first-child {
+        justify-self: start;
+        align-self: end;
+        padding: 0rem;
+        color: var(--sec-color);
+        font-size: 1.5rem;
+    }
+
+    .slot span:nth-child(2) {
+        font-weight: 700;
+    }
+
+    .slot img {
+        height: 3rem;
+    }
+
+    /*-------------------SPONSOR---------------------*/
+    .patro-sponsor div:last-child {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .patro span {
+        font-size: 2rem;
+    }
+
+    .patro img {
+        width: 100%;
+
+    }
+
+    /*-------------------SUGGESTION--------------------*/
+    .suggestion>div {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    form {
+        width: 40%;
+        margin-top: 0rem;
+        margin-left: 6rem;
+    }
+
+    /*-------------------FOOTER---------------------*/
+    footer {
+        margin-top: 0;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
